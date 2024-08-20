@@ -4,24 +4,23 @@ body, h1, h2, p, ul {
     padding: 0;
 }
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #f8f8f8;
     color: #333;
     line-height: 1.6;
 }
 header {
-    background-color: #000;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-header h1 {
-    font-size: 2.5rem;
-}
-nav {
-    background-color: #444;
-    text-align: center;
-    padding: 0.5rem 0;
+header .logo h1 {
+    font-family: 'Georgia', serif;
+    font-size: 2rem;
+    color: #333;
 }
 nav ul {
     list-style-type: none;
@@ -31,9 +30,14 @@ nav ul li {
     margin: 0 1rem;
 }
 nav ul li a {
-    color: #fff;
+    color: #333;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+nav ul li a:hover {
+    color: #666;
 }
 .hero {
     background-image: url('hero-image.jpg');
@@ -44,43 +48,55 @@ nav ul li a {
     align-items: center;
     justify-content: center;
     text-align: center;
-    color: #fff;
-    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    color: #333;
 }
 .hero h2 {
-    font-size: 3rem;
+    font-family: 'Georgia', serif;
+    font-size: 4rem;
+    margin-bottom: 1rem;
 }
 .hero p {
     font-size: 1.5rem;
     margin-top: 1rem;
+    font-family: 'Arial', sans-serif;
+    color: #777;
 }
 .container {
-    padding: 2rem;
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .about, .collections, .sustainability {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 .about h2, .collections h2, .sustainability h2 {
-    font-size: 2rem;
+    font-family: 'Georgia', serif;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
-    color: #2c3e50;
+    color: #333;
 }
 .about p, .sustainability p {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: #555;
 }
 .collections {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .collections .collection {
     flex: 1;
     background-color: #fff;
     padding: 1rem;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     text-align: center;
+    transition: transform 0.3s ease;
+}
+.collections .collection:hover {
+    transform: scale(1.05);
 }
 .collections .collection img {
     width: 150px;
@@ -88,37 +104,47 @@ nav ul li a {
     object-fit: cover;
     border-radius: 50%;
     margin-bottom: 1rem;
+    border: 1px solid #ddd;
 }
 .collections .collection h3 {
     margin-top: 0.5rem;
     font-size: 1.5rem;
+    color: #333;
 }
 .collections .collection h3 a {
     text-decoration: none;
-    color: #3498db;
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 .collections .collection h3 a:hover {
+    color: #999;
     text-decoration: underline;
 }
 footer {
-    background-color: #2c3e50;
-    color: #fff;
+    background-color: #f4f4f4;
+    color: #777;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 2rem;
+    border-top: 1px solid #ddd;
 }
 footer p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
 }
 footer ul {
     list-style-type: none;
     padding: 0;
+    margin-bottom: 1rem;
 }
 footer ul li {
     display: inline;
     margin: 0 0.5rem;
 }
 footer ul li a {
-    color: #fff;
+    color: #777;
     text-decoration: none;
+    font-size: 1rem;
+}
+footer ul li a:hover {
+    color: #333;
 }
